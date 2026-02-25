@@ -1,6 +1,6 @@
 # Hospital Secure Threat Model
 # Secure Architecture & Design: Healthcare Appointment System
-**Student:** Taha  
+**Student:** Taha Hunaid Ali 
 **Course:** Secure Architecture and Design  
 **Due Date:** February 28, 2026  
 
