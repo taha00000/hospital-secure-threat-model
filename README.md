@@ -98,7 +98,6 @@ This project presents a secure-by-design architecture for a Healthcare Appointme
 
 
 ### High-Level Architecture Diagram
-
 ```mermaid
 graph TD
     subgraph Public_Internet [External Zone]
@@ -131,13 +130,4 @@ graph TD
     PHI_Svc --> HDB
     Auth -.-> Vault
     PHI_Svc -.-> Vault
-    WAF --> Auth
-    WAF --> Appt
-    WAF --> PHI_Svc
-    Auth --> UDB
-    PHI_Svc --> HDB
-    Auth -.-> Vault
-    PHI_Svc -.-> Vault
----
-
 
