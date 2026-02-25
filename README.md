@@ -16,7 +16,7 @@ This project presents a secure-by-design architecture for a Healthcare Appointme
 - Microservices: Identity Service (Auth), Appointment Service, and Patient Record Service.
 - Data Stores: User Database (Credentials) and Health Record DB (Encrypted Clinical Data).
 
-Finf the High-Level Architecture Diagram at the end of the Readme
+Find the High-Level Architecture Diagram at the end of the Readme
 
 ## Task 2: Asset Identification and Security Objectives
 
@@ -84,10 +84,6 @@ Rather than applying code-level patches, the following architectural controls ha
 
 ### Residual Risk Explanation
 While the architecture significantly reduces the attack surface, a **Residual Risk** remains regarding **Zero-Day vulnerabilities** in third-party libraries and **Social Engineering** targeting medical staff. These risks are accepted but monitored through continuous behavioral analysis and regular security training for employees.
-
-## Executive Summary
-This project presents a secure-by-design architecture for a Healthcare Appointment System. Given the sensitivity of Protected Health Information (PHI), the design focuses on strong identity management, network segmentation, and data encryption to meet HIPAA-level security standards.
-
 
 ### High-Level Architecture Diagram
 ```mermaid
