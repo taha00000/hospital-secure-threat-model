@@ -96,16 +96,6 @@ While the architecture significantly reduces the attack surface, a **Residual Ri
 ## Executive Summary
 This project presents a secure-by-design architecture for a Healthcare Appointment System. Given the sensitivity of Protected Health Information (PHI), the design focuses on strong identity management, network segmentation, and data encryption to meet HIPAA-level security standards.
 
----
-
-## Task 1: System Definition & Architecture
-
-### Application Components
-- **Patient Portal:** Web/Mobile frontend for booking and viewing records.
-- **Doctor Portal:** Management interface for schedules and consultation notes.
-- **API Gateway:** Central entry point for routing, rate limiting, and initial authentication.
-- **Microservices:** Identity Service (Auth), Appointment Service, and Patient Record Service.
-- **Data Stores:** User Database (Credentials) and Health Record DB (Encrypted Clinical Data).
 
 ### High-Level Architecture Diagram
 
@@ -148,3 +138,6 @@ graph TD
     PHI_Svc --> HDB
     Auth -.-> Vault
     PHI_Svc -.-> Vault
+---
+
+
