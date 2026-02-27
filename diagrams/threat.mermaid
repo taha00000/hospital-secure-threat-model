@@ -1,1 +1,30 @@
+graph TD
+    subgraph External_Threat_Zone
+        P[Patient App]
+        D[Doctor Portal]
+        T1{{Threat: Spoofing}} -.-> P
+    end
 
+    subgraph Inspection_Zone
+        WAF[WAF / API Gateway]
+        T2{{Threat: Tampering/DoS}} -.-> WAF
+    end
+
+    subgraph Internal_App_Zone
+        Auth[Identity Service]
+        Appt[Appointment Service]
+        PHI_Svc[Health Record Service]
+        T3{{Threat: Elevation of Privilege}} -.-> Auth
+    end
+
+    subgraph Data_Storage_Zone
+        UDB[(User DB)]
+        HDB[(Encrypted Health DB)]
+        T4{{Threat: Info Disclosure}} -.-> HDB
+    end
+
+    P --> WAF
+    D --> WAF
+    WAF --> Auth
+    WAF --> Appt
+    WAF --> PHI_Svc
