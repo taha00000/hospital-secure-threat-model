@@ -44,38 +44,6 @@ Using the **STRIDE** methodology, we analyzed the primary components of the Heal
 | **Denial of Service** | Web Portals | Exhausting server resources via botnet to prevent patient access. | Patients cannot book or view emergency care info. | **Medium** |
 | **Elevation of Privilege** | Appointment Service | A patient user modifies their JWT to gain administrative access. | System-wide compromise of the user database. | **High** |
 
-graph TD
-    subgraph External_Threat_Zone
-        P[Patient App]
-        D[Doctor Portal]
-        T1{{Threat: Spoofing}} -.-> P
-    end
-
-    subgraph Inspection_Zone
-        WAF[WAF / API Gateway]
-        T2{{Threat: Tampering/DoS}} -.-> WAF
-    end
-
-    subgraph Internal_App_Zone
-        Auth[Identity Service]
-        Appt[Appointment Service]
-        PHI_Svc[Health Record Service]
-        T3{{Threat: Elevation of Privilege}} -.-> Auth
-    end
-
-    subgraph Data_Storage_Zone
-        UDB[(User DB)]
-        HDB[(Encrypted Health DB)]
-        T4{{Threat: Info Disclosure}} -.-> HDB
-    end
-
-    P --> WAF
-    D --> WAF
-    WAF --> Auth
-    WAF --> Appt
-    WAF --> PHI_Svc
-
-
 
 ### Risk Reasoning
 Threats involving **Information Disclosure** and **Tampering** of medical data are assigned a **High** risk level due to the legal and physical safety implications inherent in healthcare systems.
