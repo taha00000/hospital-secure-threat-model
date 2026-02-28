@@ -87,37 +87,3 @@ Rather than applying code-level patches, the following architectural controls ha
 ### Residual Risk Explanation
 While the architecture significantly reduces the attack surface, a **Residual Risk** remains regarding **Zero-Day vulnerabilities** in third-party libraries and **Social Engineering** targeting medical staff. These risks are accepted but monitored through continuous behavioral analysis and regular security training for employees.
 
-### High-Level Architecture Diagram
-```mermaid
-graph TD
-    subgraph Public_Internet [External Zone]
-        P[Patient App]
-        D[Doctor Portal]
-    end
-
-    subgraph DMZ [Inspection Zone]
-        WAF[WAF / API Gateway]
-    end
-
-    subgraph Private_App_Net [Internal Trust Boundary]
-        Auth[Identity Service]
-        Appt[Appointment Service]
-        PHI_Svc[Health Record Service]
-    end
-
-    subgraph Data_Layer [Secure Storage Zone]
-        UDB[(User DB)]
-        HDB[(Encrypted Health DB)]
-        Vault[Secrets Manager]
-    end
-
-    P --> WAF
-    D --> WAF
-    WAF --> Auth
-    WAF --> Appt
-    WAF --> PHI_Svc
-    Auth --> UDB
-    PHI_Svc --> HDB
-    Auth -.-> Vault
-    PHI_Svc -.-> Vault
-
