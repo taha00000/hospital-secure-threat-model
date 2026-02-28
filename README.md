@@ -63,10 +63,14 @@ Using the **STRIDE** methodology, we analyzed the primary components of the Heal
 | **Elevation of Privilege** | Appointment Service | A patient user modifies their JWT to gain administrative access. | System-wide compromise of the user database. | **High** |
 | **Repudiation** | Logging Service | Malicious administrator deletes logs to cover traces. | Lack of forensic evidence/accountability. | **High** |
 
-### 3.1 Risk Reasoning
-
-Threats involving Information Disclosure and Tampering of medical data are assigned a High risk level due to the legal and safety implications inherent in healthcare systems.
-
+### 3.1 Risk Reasoning (per Threat)
+- **Spoofing (High):** Impersonating doctors poses a direct threat to patient privacy and system trust; mandatory MFA is required to lower this risk.
+- **Tampering (High):** Data integrity is paramount in healthcare; even minor changes to dosages or history can be fatal.
+- **Information Disclosure (High):** PHI is a high-value target for ransomware and identity theft; disclosure leads to irreparable legal damage.
+- **Denial of Service (Medium):** While it blocks access, it does not inherently leak data, making it a lower priority than data integrity threats.
+- **Elevation of Privilege (High):** If a patient gains admin access, the entire multi-tenant isolation model collapses.
+- **Repudiation (High):** In a clinical environment, knowing "who did what" is a legal requirement; deleting logs is a critical failure of accountability.
+  
 ### 3.2 Programmatic Risk Calculation
 
 The logic (implemented in scripts/risk_calc.py) is used to categorize risk levels objectively.
