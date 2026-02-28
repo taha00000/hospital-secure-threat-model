@@ -48,6 +48,10 @@ Using the **STRIDE** methodology, we analyzed the primary components of the Heal
 | **Elevation of Privilege** | Appointment Service | A patient user modifies their JWT to gain administrative access. | System-wide compromise of the user database. | **High** |
 
 
+### Threat diagram
+![hospital-secure-threat-model](./diagrams/threat.png)
+---
+
 ### Risk Reasoning
 Threats involving **Information Disclosure** and **Tampering** of medical data are assigned a **High** risk level due to the legal and physical safety implications inherent in healthcare systems.
 
