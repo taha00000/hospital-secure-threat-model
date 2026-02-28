@@ -16,6 +16,10 @@ This project presents a secure-by-design architecture for a Healthcare Appointme
 - Microservices: Identity Service (Auth), Appointment Service, and Patient Record Service.
 - Data Stores: User Database (Credentials) and Health Record DB (Encrypted Clinical Data).
 
+### 1.2 Architecture Diagram
+![hospital-secure-threat-model](./diagrams/highlevel.png)
+---
+
 Find the High-Level Architecture Diagram at the end of the Readme
 
 ## Task 2: Asset Identification and Security Objectives
