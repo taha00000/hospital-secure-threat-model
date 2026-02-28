@@ -17,7 +17,7 @@ This project presents a secure-by-design architecture for a Healthcare Appointme
 - Data Stores: User Database (Credentials) and Health Record DB (Encrypted Clinical Data).
 
 ### 1.2 Architecture Diagram
-![hospital-secure-threat-model](./diagrams/highlevel.png)
+![hospital-secure-threat-model](./diagrams/high_level.png)
 ---
 
 Find the High-Level Architecture Diagram at the end of the Readme
