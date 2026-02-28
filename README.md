@@ -50,8 +50,6 @@ The following assets have been identified as critical to the system. Security ob
 
 ## Task 3: Threat Modeling (STRIDE)
 
-
-
 Using the **STRIDE** methodology, we analyzed the primary components of the Healthcare system to identify high-risk architectural threats.
 
 | Threat Category | Affected Component | Description | Impact | Risk Level |
