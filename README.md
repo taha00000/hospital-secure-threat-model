@@ -20,7 +20,6 @@ This project presents a secure-by-design architecture for a Healthcare Appointme
 ![hospital-secure-threat-model](./diagrams/high_level.png)
 ---
 
-Find the High-Level Architecture Diagram at the end of the Readme
 
 ## Task 2: Asset Identification and Security Objectives
 
